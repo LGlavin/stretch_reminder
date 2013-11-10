@@ -8,7 +8,8 @@ feature 'user signs up', %Q{
 
   scenario 'user enters valid informaiton' do
   visit new_user_registration_path 
-  fill_in 'Username', with: 'zombie1984'
+  fill_in 'Name', with: 'zombie1984'
+  fill_in 'Phone number', with: '5088133898'
   fill_in 'Email', with: 'zombie@example.com'
   fill_in 'user_password', with: 'password'
   fill_in 'Password confirmation', with: 'password'

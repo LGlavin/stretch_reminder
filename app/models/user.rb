@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
-  validates_presence_of :username
-  validates :username, length: { maximum: 30 }
+  validates_presence_of :name
+  validates :name, length: { maximum: 30 }
+  validates :phone_number, presence: true, uniqueness: true, length: { is: 10 }
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

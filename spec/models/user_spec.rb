@@ -1,8 +1,11 @@
 require 'spec_helper'
 
 describe User do
-  it { should have_valid(:username).when('zombie83') }
-  it { should_not have_valid(:username).when(nil, '') }
+  it { should have_valid(:name).when('zombie83') }
+  it { should_not have_valid(:name).when(nil, '') }
+
+  it { should have_valid(:phone_number).when('5088133898') }
+  it { should_not have_valid(:phone_number).when("1", "1234567891011") }
 
   it { should have_valid(:email).when('zombie@example.com') }
   it { should_not have_valid(:email).when(nil, '') }
