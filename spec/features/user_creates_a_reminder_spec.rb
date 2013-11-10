@@ -16,9 +16,10 @@ scenario "user enters valid information" do
   fill_in "user_password", with: user.user_password
   click_button "Sign In"
   fill_in "reminder_description", with: "Did you stretch today?"
-  select "Tuesday", from "reminder_days"
+  select "Tuesday", from: "reminder_days"
   click_button "Create Reminder"
 
   expect(page).to have_content("Did you stretch today?")
   expect(user.prompts.count).to eql(prev_count + 1)
+  end
 end
