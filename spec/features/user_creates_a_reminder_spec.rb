@@ -8,15 +8,18 @@ feature "user creates a new reminder", %Q{
 
 scenario "user enters valid information" do 
   user = FactoryGirl.create(:user)
-  user.verify
+  #user.verify
 
-  prev_count = user.reminder.count 
+ # prev_count = user.reminder.count 
   visit new_user_session_path
-  fill_in "user_email", with: user.user_email
-  fill_in "user_password", with: user.user_password
-  click_button "Sign In"
-  fill_in "reminder_description", with: "Did you stretch today?"
-  select "Tuesday", from: "reminder_days"
+  fill_in "Email", with: user.email
+  fill_in "Password", with: user.password
+  click_button "Sign in"
+  
+  #visit welcome_path
+
+  fill_in "Description", with: "Did you stretch today?"
+  #select "Tuesday", from: "reminder_days"
   click_button "Create Reminder"
 
   expect(page).to have_content("Did you stretch today?")

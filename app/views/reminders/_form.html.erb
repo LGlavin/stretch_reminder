@@ -1,0 +1,24 @@
+<%= form_for @reminder do |f| %>
+ 
+
+<% if @reminder.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@reminder.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+    <ul>
+    <% @reminder.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :dispatch_time %><br />
+    <%= f.text_field :dispatch_time %>
+  </p>
+  <p><%= f.submit 'Create Reminder' %></p>
+<% end %>
