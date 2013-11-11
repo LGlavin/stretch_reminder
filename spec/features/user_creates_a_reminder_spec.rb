@@ -16,10 +16,10 @@ scenario "user enters valid information" do
   fill_in "Password", with: user.password
   click_button "Sign in"
   
-  #visit welcome_path
+  visit welcome_path
 
   fill_in "Description", with: "Did you stretch today?"
-  #select "Tuesday", from: "reminder_days"
+  select "Tuesday", from: "reminder_days"
   click_button "Create Reminder"
 
   expect(page).to have_content("Did you stretch today?")
