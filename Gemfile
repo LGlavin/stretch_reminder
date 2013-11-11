@@ -27,6 +27,7 @@ gem 'devise'
 group :development, :test do
 gem 'pry-rails'
 gem 'rspec-rails'
+gem 'sms-spec'
 gem 'shoulda-matchers'
 gem 'valid_attribute'
 gem 'capybara'
