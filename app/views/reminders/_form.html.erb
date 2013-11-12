@@ -16,9 +16,15 @@
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </p>
-  <p>
-    <%= f.label :dispatch_time %><br />
-    <%= f.text_field :dispatch_time %>
-  </p>
+<div class="field">
+  <%= f.label :days %><br/>
+  <%= f.date_select :datetime, :ignore_time => true %>
+</div>
+ 
+ <div class="field">
+  <%= f.label :time %><br/>
+  <%= f.time_select :datetime, :ignore_time => true %>
+</div>
+
   <p><%= f.submit 'Create Reminder' %></p>
 <% end %>
