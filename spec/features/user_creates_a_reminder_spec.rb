@@ -16,7 +16,7 @@ scenario "user enters valid information" do
   fill_in "Password", with: user.password
   click_button "Sign in"
   
-  visit welcome_path
+  visit dashboard_path
 
   fill_in "Description", with: "Did you stretch today?"
   select "Tuesday", from: "reminder_days"
