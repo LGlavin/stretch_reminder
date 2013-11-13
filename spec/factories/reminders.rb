@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :reminder do
     description "MyString"
     user_id 1
+     datetime 'monday'
   end
 end

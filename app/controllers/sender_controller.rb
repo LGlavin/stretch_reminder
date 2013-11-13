@@ -18,4 +18,4 @@ class SendTextController < ApplicationController
     )
   end
 end
-en
+

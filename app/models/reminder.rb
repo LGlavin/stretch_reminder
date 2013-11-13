@@ -2,6 +2,7 @@ class Reminder < ActiveRecord::Base
 validates :description, presence: true, length: { maximum: 160 }
 validates :dispatch_time, presence: true
 #validates :user, presence: true
+validates_presence_of :datetime
 
 belongs_to :user
 

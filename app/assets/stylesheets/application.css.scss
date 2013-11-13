@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Sintony);
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -11,4 +13,16 @@
  *= require_self
  *= require_tree .
  */
+
+//$body-bg: #9b59b6;
+$navbar-default-bg:#ecf0f1;
+$navbar-default-link-color:#2c3e50;
+$navbar-default-link-hover-color:#ecf0f1;
+$navbar-default-brand-hover-bg: #9b59b6;
+$navbar-default-brand-link-color: white;
+
 @import 'bootstrap';
+@import 'reminders';
+
+
+

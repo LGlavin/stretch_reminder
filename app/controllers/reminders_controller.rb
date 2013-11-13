@@ -1,7 +1,6 @@
 class RemindersController < ApplicationController
   def index
     @reminders = Reminder.all
-    #@reminders = Reminder.where(user_id: current_user.id).sort_by(&:id  && :state)
   end
   def new 
     @reminder = Reminder.new
@@ -29,7 +28,7 @@ class RemindersController < ApplicationController
   
   private
   def reminder_params
-    params.require(:reminder).permit(:description, :dispatch_time, :days)
+    params.require(:reminder).permit(:description, :dispatch_time, :datetime)
 
    end
 end

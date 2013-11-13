@@ -1,0 +1,27 @@
+ 
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+  
+    <a class="navbar-brand" href="#">Stretch</a></div>
+  
+
+<div class="navbar-right">
+        <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?
+    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+  
+    <%= link_to "Sign Up", new_user_registration_path %>
+
+     <%= link_to "Sign In", new_user_session_path, :class => "flipper"  %>
+   <% end %>
+  
+
+  </div>
+
+    <%= yield :head %> 
+    
+  </div><!-- /.navbar-collapse -->
+</nav>
+</body>
