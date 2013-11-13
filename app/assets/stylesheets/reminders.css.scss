@@ -18,9 +18,12 @@ body
   padding:15px;
   font-size:15px;
   }
-a:hover{
+//  a:hover{
+//   text-decoration:none;
+//   font-color: #9b59b6;
+// }
+a:link{
   text-decoration:none;
-  color: #9b59b6;
 }
 
 .glyphicon-phone{
@@ -28,13 +31,40 @@ a:hover{
   padding:55px;
   margin:2px;
   height:150px;
-  
+
 }
 h2{
   padding:5px;
   margin:25px;
   font-family: 'Sintony', sans-serif;
 }
+#container2{
+  width: 100%;
+ 
+
+}
+.clock{
+  display:inline-block;
+  width:200px;
+  position:relative;
+  left: 0;
+  //background-color:purple;
+  margin-left: 55px;
+}
+ h4{
+  margin-left: -25px;
+  font-family: 'Sintony', sans-serif, bold;
+  color: #7f8c8d;
+  
+ }
+.comments{
+  display:inline-block;
+  margin-left:250px;
+ // background-color:yellow;
+  position: relative;
+  left: 0;
+  width: 200px; }
+
 #frontpage {
   //background-color:#9b59b6;
   background-image: url('mountain-stretch.jpg');
@@ -46,135 +76,10 @@ h2{
   // position: absolute;
   // top: 0;
   // left: 0;
-  min-height: 1000px;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
--webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0 2px 0 #fff,0 -1px 0 #fff;
+  min-height: 600px;
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #999;
+//-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0 2px 0 #fff,0 -1px 0 #fff;
 box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0 2px 0 #fff,0 -1px 0 #fff;
-}
-#footer{
-  //background-color:#9b59b6;
-  // width: 100%;
-  // height: 100%;
-}
-#title{
-  margin: 40px;
-  font-size: 55px;
-  font-weight: 500;
-  color: white;}
-
-.panel .signup {
-    position: absolute;
-    top: 0;
-    z-index: 900;
-    width: inherit;
-    height: inherit;
-    text-align: center;
-    -webkit-transform: rotateX(0deg) rotateY(0deg);
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-transform: rotateX(0deg) rotateY(0deg);
-    -moz-transform-style: preserve-3d;
-    -moz-backface-visibility: hidden;
-    -o-transition: all .4s ease-in-out;
-    -ms-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.panel .signin {
-    position: absolute;
-    top: 0;
-    z-index: 800;
-    width: inherit;
-    height: inherit;
-    text-align: center;
-    -webkit-transform: rotateY(-180deg);
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-transform: rotateY(-180deg);
-    -moz-transform-style: preserve-3d;
-    -moz-backface-visibility: hidden;
-    -o-transition: all .4s ease-in-out;
-    -ms-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.panel.flip .signup {
-    z-index: 800;
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-}
-
-.panel.flip .signin {
-    z-index: 800;
-    -webkit-transform: rotateX(0deg) rotateY(0deg);
-    -moz-transform: rotateX(0deg) rotateY(0deg);
-}
-
-.panel {
-    color: white;
-    margin-top: 10%;
-    margin-left: 5%;
-    font-size: .8em;
-    -webkit-perspective: 600px;
-    -moz-perspective: 600px;
-}
-
-.panel label {
-  display: none
-}
-
-
-.panel .signup input, .panel .signin input {
-  height: 40px;
-  width: 250px;
-  font-size: 25px;
-  color: #666;
-  margin: -5px 0 -5px 0;
-  border-radius: 10px;
-  padding-left: 10px;
-  border: 2px solid #666;
-  box-shadow: inset 1px 1px 15px 1px #666
-}
-.panel .signup input[type=submit], .panel .signin input[type=submit] {
-  margin-top: 15px;
-  width: 250px;
-  height: 40px;
-  line-height: 10px;
-  color: white;
-  font-family: 'Roboto';
-  font-weight: lighter;
-  font-size: 20px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 1px 1px rgba(0,0,0,.3);
-  border-radius: 10px;
-  box-shadow: 0 3px 6px #333;
-  border: solid 1px #0099CC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ecf0f1), to(#0099CC));
-}
-
-.panel .signup input[type=submit]:active, .panel .signin input[type=submit]:active {
-  position: relative;
-  top: 1px;
-}
-
-.panel .signup ::-webkit-input-placeholder, .panel .signin ::-webkit-input-placeholder {
-   font-family: 'Roboto';
-   font-weight: lighter;
-   font-size: 20px;
-}
-
-.form_title {
-    font-family: 'Roboto';
-    font-weight:bolder;
-    font-size: 30px;
-    text-shadow: 2px 2px 3px black;
-    margin-bottom: 5px
 }
 

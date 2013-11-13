@@ -5,12 +5,13 @@ class RemindersController < ApplicationController
   def new 
     @reminder = Reminder.new
   end  
- 
+
     def create
      @reminder = Reminder.new(reminder_params)
      if @reminder.save
-        flash[:notice] = "Reminder was succesfully saved!"
-        redirect_to new_reminder_path
+        @reminder.send_text_message 
+
+        redirect_to reminder_path @reminder
     else
         render :new
     end
@@ -28,7 +29,7 @@ class RemindersController < ApplicationController
   
   private
   def reminder_params
-    params.require(:reminder).permit(:description, :dispatch_time, :datetime)
+    params.require(:reminder).permit(:description, :dispatch_time)
 
    end
 end

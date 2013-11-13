@@ -7,7 +7,7 @@ Tester::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'welcome#index'
-   match '/dashboard', to:'reminders#index', via: 'get'
+  # match '/dashboard', to:'reminders#index', via: 'get'
    
  
   # Example of regular route:
