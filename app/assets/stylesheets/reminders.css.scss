@@ -1,6 +1,12 @@
 // Place all the styles related to the reminders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+
 body
 {
   font-family: 'Sintony', sans-serif;
@@ -11,18 +17,18 @@ body
 .navbar-right{
   padding:15px;
   font-size:15px;
-  
- }
-
+  }
 a:hover{
   text-decoration:none;
   color: #9b59b6;
 }
 
-.glyphicon{
+.glyphicon-phone{
   box-size: 25px;
   padding:55px;
   margin:2px;
+  height:150px;
+  
 }
 h2{
   padding:5px;
@@ -172,11 +178,3 @@ box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0
     margin-bottom: 5px
 }
 
-// #about {
-//   position: absolute;
-//   top:15px;
-//   left: 20px;
-//   font-size: 25px;
-//   font-weight: 100;
-//   color: white;
-// }
