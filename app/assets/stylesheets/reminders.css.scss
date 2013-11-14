@@ -40,6 +40,7 @@ h2{
 }
 #container2{
   width: 100%;
+  //clear-fix:both;
  
 
 }
@@ -49,7 +50,8 @@ h2{
   position:relative;
   left: 0;
   //background-color:purple;
-  margin-left: 55px;
+  margin-left: 85px;
+  width:200px;
 }
  h4{
   margin-left: -25px;
@@ -59,12 +61,21 @@ h2{
  }
 .comments{
   display:inline-block;
-  margin-left:250px;
+  margin-left:240px;
  // background-color:yellow;
   position: relative;
   left: 0;
   width: 200px; }
 
+.hearts{
+  display:inline-block;
+  margin-left: 290px;
+  position: relative;
+  left: 0;
+  width:200px;
+  padding: 2px;
+  //background-color:purple;
+}
 #frontpage {
   //background-color:#9b59b6;
   background-image: image-url('mountain-stretch.jpg');
